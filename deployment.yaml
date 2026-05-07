@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: playground-container
-        image: wil42/playground:v1 # <--- During defense, you will change this to v2
+        image: wil42/playground:v2 # <--- During defense, you will change this to v2
         ports:
         - containerPort: 8888
 ---
@@ -29,6 +29,6 @@ spec:
     app: wil-playground
   ports:
     - protocol: TCP
-      port: 8888        # Port exposed by the Service
-      targetPort: 8888  # Port the app is listening on inside the container
-  type: LoadBalancer    # This allows K3d to map it to your iMac's port 8888
+      port: 8888       
+      targetPort: 8888  
+  type: LoadBalancer   
